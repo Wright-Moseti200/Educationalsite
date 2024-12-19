@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*
+{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+body
+{
+  height:100vh;
+}
+.background
+{
+   background-image: url("./edusity_assets/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.background2
+{
+background-color: rgba(0, 0, 139, 0.35);
+}
+.back
+{
+  width:700px;
+}
+
+.height1
+{
+  animation-name: height1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  margin-top: 220px;
+
+}
+
+
+
+ 
+.height2
+{
+  animation-name: height2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  height:60px;
+}
+
+@keyframes height2
+{
+  0%
+{
+  opacity:0;
+}
+100%
+{
+  opacity: 1;
+}
+}
+.height2 p
+{
+  cursor: pointer;
+}
+.back-12
+{
+  height:100%;
+}
+.pound:nth-child(1)
+{
+  background-image: url("./edusity_assets/program-1.png");
+  background-position: center;
+  background-size: cover;
+  height:320px;
+  width:320px;
+  background-color: black;
+}
+.pound:nth-child(2)
+{
+  background-image: url("./edusity_assets/program-2.png");
+  background-position: center;
+  background-size: cover;
+  height:320px;
+  width:320px;
+}
+.pound:nth-child(3)
+{
+  background-image: url("./edusity_assets/program-3.png");
+  background-position: center;
+  background-size: cover;
+  height:320px;
+  width:320px;
+}
+
+.width1
+{
+  width:900px;
+}
+.back10
+{
+  background-image: url("./edusity_assets/about.png");
+  background-position: center;
+  background-size:cover;
+}
+
+.round1:nth-child(1)
+{
+  background-image: url("./edusity_assets/gallery-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.round1:nth-child(2)
+{
+  background-image: url("./edusity_assets/gallery-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.round1:nth-child(3)
+{
+  background-image: url("./edusity_assets/gallery-3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.round1:nth-child(4)
+{
+  background-image: url("./edusity_assets/gallery-4.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.carousel
+{
+}
+.overflow-hidden
+{
+width:1025px;
+height:219px;
+background-color: white;
+height: 250px;
+}
+.card
+{
+  width:500px;
+}
+
+.card p
+{
+  width:450px;
+}
+
+input,textarea
+{
+  width:500px;
+}
+
+input::placeholder
+{
+color:black;
+}
+
+textarea::placeholder
+{
+color:black;
+}
+
+.border-t-2
+{
+width:1300px;
+}
+.back1
+{
+transition: all 150ms linear;
+cursor:pointer;
+}
+.back25
+{
+  opacity: 0;
+   margin-top: 130px;
+  transition: all 250ms linear;
+}
+.back1:hover
+{
+  background-color: rgba(0, 0, 139, 0.35);
+}
+.back1:hover .back25
+{
+  margin-top: 0px;
+  opacity: 1;
+}
+
+
