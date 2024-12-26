@@ -67,6 +67,7 @@ background-color: rgba(0, 0, 139, 0.35);
 {
   cursor: pointer;
 }
+
 .back-12
 {
   height:100%;
@@ -196,5 +197,119 @@ cursor:pointer;
   margin-top: 0px;
   opacity: 1;
 }
-
-
+.brick2
+{
+  display: none;
+}
+@media (max-width:414.40px)
+{
+  body
+  {
+    width:414px;
+    overflow-x: hidden;
+  }
+.height2
+{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  width:414.40px;
+}
+.brick
+{
+  flex-direction: column;
+  position: fixed;
+  height:500px;
+  width:414.40px;
+  background-color:rgba(0, 0, 255, 0.25);
+  top:80px;
+  left: -10px;
+  overflow: hidden;
+  z-index:1;
+  backdrop-filter: blur(18.5px);
+  border-radius: 10px;
+}
+.brick2
+{
+  display: flex;
+  position: fixed;
+  left:355px;
+  cursor: pointer;
+}
+.class1
+{
+  position: relative;
+  bottom:90px;
+}
+.brick3
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:414.40px;
+}
+.brick4
+{
+  display: flex;
+  flex-direction:column-reverse;
+  text-align: center;
+  width:414.40px;
+  justify-content: space-between;
+  height:1000px;
+}
+.brick5
+{
+  display: flex;
+  flex-direction: column;
+}
+.brick6
+{
+  display: flex;
+  flex-direction: column;
+  width:414.40px;
+  align-items: center;
+  justify-content: center;
+  gap:45px;
+}
+form
+{
+  display: flex;
+  justify-content: left;
+}
+form input
+{
+  width:410px;
+}
+form label
+{
+  width:410px;
+}
+form textarea
+{
+  width:410px;
+}
+.brick7
+{
+  display: flex;
+  overflow: scroll;
+  height:220px
+}
+.brick9
+{
+  position:absolute;
+  display: none;
+  z-index: 2;
+}
+.brick9:nth-child(1)
+{
+  left: 1px;
+}
+.brick9:nth-child(2)
+{
+right:0px;
+}
+.brick7::-webkit-scrollbar
+{
+display: none;
+}
+}

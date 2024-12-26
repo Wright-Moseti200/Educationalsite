@@ -16,15 +16,20 @@ import location from "./edusity_assets/location-icon.png"
 import program1 from "./edusity_assets/program-icon-1.png";
 import program2 from "./edusity_assets/program-icon-2.png";
 import program3 from "./edusity_assets/program-icon-3.png";
+import image1 from "./edusity_assets/menu_open.svg";
+
+
 const App = () =>
 { 
   let [, setResult] = useState("");
+  let [bool, setbool]=useState(true);
   let [springs, api] = useSpring(() => ({
     from:
     {
         translateX:"0%"
       }
   }))
+  
   
   let next = () =>
   {
@@ -49,7 +54,13 @@ const App = () =>
       },
     });
   }
-  
+
+  let [springs1, api1] = useSpring(() => ({
+    from: {
+      height: "0px",
+    },
+  }));
+
 const onSubmit = async (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
@@ -70,8 +81,41 @@ const onSubmit = async (event) => {
     console.log("Error", data);
     setResult(data.message);
   }
-};
-
+}
+  
+  let handleclick = () =>
+  {
+    if (bool)
+    {
+      api1.start
+        (
+          {
+            from:
+            {
+              height: "0px"
+            },
+            to:
+            {
+              height: "500px"
+            }
+          }
+      );
+      setbool(false);
+    }
+    else
+    {
+      api1.start({
+        from: {
+          height: "500px",
+        },
+        to: {
+          height: "0px",
+        },
+      });
+      setbool(true);
+     }
+  }
+  
   return (
     <div className="back-12">
       <div class="background h-full w-full back-12">
@@ -79,16 +123,22 @@ const onSubmit = async (event) => {
           <div class="flex flex-row items-center justify-around height2 ">
             <img src={logo} class="h-8" alt="Graduation picture" />
             <div class="flex justify-around back items-center">
+              <img src={image1} alt="menu-open" class="brick2" onClick={handleclick} />
+              <animated.div className="flex flex-row items-center justify-around brick w-full" style={{
+                transition: "all 0.1s linear",
+                ...springs1
+              }}>
               <p className="text-white">Home</p>
               <p className="text-white">Progarm</p>
               <p className="text-white">About us</p>
               <p className="text-white">Testimonials</p>
               <button class="bg-white text-black border-none p-2 w-32 rounded-full">
                 Contact Us
-              </button>
+                </button>
+                </animated.div>
             </div>
           </div>
-          <div class="height1 flex flex-col justify-center items-center class1">
+          <div class="height1 flex flex-col justify-center items-center class1" >
             <h1 class="font-serif text-center text-6xl text-white font-bold font-serif">
               We Ensure better education
               <br />
@@ -118,8 +168,8 @@ const onSubmit = async (event) => {
       <br />
       <br />
       <br />
-      <div className="flex flex-row justify-center items-center pound1">
-        <div class="flex justify-around gap-16 pound2">
+      <div className="flex flex-row justify-center items-center pound1 ">
+        <div class="flex justify-around gap-16 pound2 brick3">
           <div className="pound  rounded-md flex flex-col justify-center items-center">
             <div className="back1 rounded-md h-full w-full flex flex-col justify-center items-center back21">
               <div className="flex flex-col justify-center items-center back25">
@@ -150,7 +200,7 @@ const onSubmit = async (event) => {
       <br />
       <br />
       <br />
-      <div class="flex flex-row gap-8 flex justify-center pound3">
+      <div class="flex flex-row gap-8 flex justify-center pound3 brick4">
         <div className="h-96 w-96 back10 rounded-md flex justify-center"></div>
         <div className="flex flex-col h-96 par1">
           <h1 class="text-md font-bold text-blue-900 ">ABOUT UNIVERSITY</h1>
@@ -206,7 +256,7 @@ const onSubmit = async (event) => {
       <br />
       <br />
       <div className="flex flex-col justify-center items-center">
-        <div className="flex flex-row items-center justify-center gap-5 pound5">
+        <div className="flex flex-row items-center justify-center gap-5 pound5 brick5">
           <div className="h-96 w-72 rounded-md round1"></div>
           <div className="h-96 w-72 rounded-md round1"></div>
           <div className="h-96 w-72 rounded-md round1"></div>
@@ -236,13 +286,13 @@ const onSubmit = async (event) => {
         <button
           style={{ marginTop: "100px" }}
           onClick={back}
-          className="w-10 h-10 rounded-full bg-blue-900 text-white"
+          className="w-10 h-10 rounded-full bg-blue-900 text-white brick9"
         >
           <i class="fa-solid fa-arrow-left"></i>
         </button>
         <div className="overflow-hidden decoration-white bg-white flex flex-row  items-center">
           <animated.div
-            className="carousel flex flex-row  items-center gap-4"
+            className="carousel flex flex-row  items-center gap-4 brick7"
             style={{ ...springs }}
           >
             <div className="card flex flex-col shadow-xl p-5 rounded-md ">
@@ -342,7 +392,7 @@ const onSubmit = async (event) => {
         <button
           style={{ marginTop: "100px" }}
           onClick={next}
-          className="w-10 h-10 rounded-full bg-blue-900 text-white"
+          className="w-10 h-10 rounded-full bg-blue-900 text-white brick9"
         >
           <i class="fa-solid fa-arrow-right"></i>
         </button>
@@ -355,7 +405,7 @@ const onSubmit = async (event) => {
       <br />
       <br />
       <div class="flex justify-center items-center">
-        <div class="flex flex-row gap-52 pound6">
+        <div class="flex flex-row gap-52 pound6 brick6">
           <div className="pound7">
             <h1 className="text-3xl text-blue-900 font-semibold">
               Send us a message
