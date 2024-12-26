@@ -221,7 +221,7 @@ cursor:pointer;
   position: fixed;
   height:500px;
   width:414.40px;
-  background-color:rgba(0, 0, 255, 0.25);
+  background-color:rgba(0, 0, 255, 0.7);
   top:80px;
   left: -10px;
   overflow: hidden;
@@ -233,8 +233,9 @@ cursor:pointer;
 {
   display: flex;
   position: fixed;
-  left:355px;
+  left:360px;
   cursor: pointer;
+  z-index: 2;
 }
 .class1
 {
@@ -315,5 +316,13 @@ display: none;
 .brick10
 {
   z-index:1;
+}
+.brick11
+{
+  z-index:2;
+}
+.brick12
+{
+  z-index:3;
 }
 }

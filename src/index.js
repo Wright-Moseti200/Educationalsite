@@ -120,9 +120,9 @@ const onSubmit = async (event) => {
     <div className="back-12">
       <div class="background h-full w-full back-12">
         <div class="background2 h-full w-full flex flex-col">
-          <div class="flex flex-row items-center justify-around height2 ">
+          <div class="flex flex-row items-center justify-around height2 brick12">
             <img src={logo} class="h-8" alt="Graduation picture" />
-            <div class="flex justify-around back items-center ">
+            <div class="flex justify-around back items-center brick11">
               <img src={image1} alt="menu-open" class="brick2" onClick={handleclick} />
               <animated.div className="flex flex-row items-center justify-around brick w-full brick" style={{
                 transition: "all 0.1s linear",
